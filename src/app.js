@@ -105,8 +105,12 @@ request({url: url3,json: true},(error,response,body)=>{
              })
 
         }else{
+            console.log('Final response ==> ' +JSON.stringify(response.body))
             return  res.send({            
                 description:response.body.current.weather_descriptions[0],
+                timezoneid:response.body.location.timezone_id,
+                windspeed:response.body.current.wind_speed,
+                winddirection:response.body.current.wind_dir,
                 time:response.body.current.observation_time
              })
         }        

@@ -25,8 +25,8 @@ weatherform.addEventListener('submit',(e)=>{
       }else{
         console.log('URL '+url)
         console.log('Data '+data)
-        messageOne.textContent='It feels like ' + data.description
-        messageTwo.textContent='Observation Time ' + data.time
+        messageOne.textContent='It feels like ' + data.description + ' .WindSpeed is ' + data.windspeed + ' flowing in ' + data.winddirection + ' direction'
+        messageTwo.textContent='Observation Time ' + data.time + ' timezone ' + data.timezoneid
       }
 
       }) 
